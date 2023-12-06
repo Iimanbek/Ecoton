@@ -50,6 +50,7 @@ export default {
         </div>
         <div class="header__title">
           <img src="../../public/media/images/exmaplescreen.png" /></div>
+          <p class="data_real">Данные в реальном времени</p>
         <div class="header___title">
         </div>
       </div>
@@ -115,6 +116,17 @@ export default {
 </template>
 
 <style>
+.header-title img{
+  border-bottom: 1px solid white;
+}
+.header-title{
+  background: rgb(238 240 242);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #fcf-button{
   color: white;
 }
