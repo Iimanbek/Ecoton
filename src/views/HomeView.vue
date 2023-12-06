@@ -5,8 +5,8 @@ export default {
       {title: 'Главная'},
       {title: 'О нас'},
       {title: 'Наши партнеры'},
-      {title: 'Контакты'},
       {title: 'Отзывы'},
+      {title: 'Контакты'},
     ],
   }),
 }
@@ -16,7 +16,7 @@ export default {
   <div>
     <div class="wrap">
       <div class="logo">
-        <h3>RMPRO</h3>
+        <h3>RmPro</h3>
       </div>
       <div>
         <router-link to="/auth/signin">sign in</router-link>
@@ -43,10 +43,70 @@ export default {
         </v-menu>
       </nav>
     </div>
+    <div>
+      <div class="image_wrap">
+        <div class="header-title">
+          <img src="../../public/media/images/welcome.png"/>
+        </div>
+        <div class="header__title">
+          <img src="../../public/media/images/exmaplescreen.png" /></div>
+        <div class="header___title">
+        </div>
+      </div>
+    </div>
+    <div class="part_wrap">
+      <br>
+      <h2>Наши партнеры (например)</h2>
+      <br>
+      <div class="partners">
+        <div>
+          <img src="../../public/media/images/partners.png"/>
+
+          <p>Продают датчики</p>
+        </div>
+        <div>120 теплиц</div>
+        <div>50 Отелей</div>
+        <div>500 ресторанов</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
+.partners img{
+  width: 100%;
+  object-fit: cover;
+}
+.part_wrap{
+  text-align: center;
+  color: #1a73e8;
+}
+.partners div{
+  color: white;
+  width: 80px;
+  height: 80px;
+  background: #1565c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.partners{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.image_wrap img{
+  width: 100%;
+  object-fit: contain;
+}
+.header_img img{
+  width: 100%;
+}
+.header_img{
+  width: 90%;
+  margin: 0 auto auto ;
+}
 .logo{
   color:#1565c0 ;
 }
