@@ -3,6 +3,7 @@ import { defineStore } from 'pinia';
 export const useAuthStore = defineStore('auth', {
     state: () => ({
         hello: 'hello',
+        loading1: false,
         show2: false,
         formData: {
             email: '',
@@ -35,7 +36,7 @@ export const useAuthStore = defineStore('auth', {
                 const response = await fetch(URL, OPTIONS)
                 const data = await response.json()
                 if (response.ok) {
-                    localStorage.setItem('user', data)
+                    localStorage.setItem('user', JSON.stringify(data))
                     alert('sign up done')
                 } else {
                     switch (data.error.message) {
@@ -58,6 +59,12 @@ export const useAuthStore = defineStore('auth', {
             }
             else if(path == 'signin'){
                 this.loading1 = true
+                console.log(this.loading1)
+                this.FormData = {
+                    email: mail,
+                    password: password,
+                    returnSecureToken: true
+                }
                 if (this.FormData.email.length && this.FormData.password.length) {
                     let options = {
                         method: 'POST',
@@ -71,8 +78,7 @@ export const useAuthStore = defineStore('auth', {
                     console.log(res);
                     if (response.ok) {
                         localStorage.setItem('user', JSON.stringify(res))
-                        // this.$router.push({ path: '/user/1' })
-
+                        alert('sign in done')
                     } else {
                         this.$notify({
                             title: res.error.message,

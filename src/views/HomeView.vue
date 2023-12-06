@@ -7,7 +7,6 @@
       <router-link to="/auth/signin">sign in</router-link>
       <router-link to="/auth/signup">sign up</router-link>
     </div>
-      <h2>Sorry for the empty page</h2>
   </div>
 </template>
 
