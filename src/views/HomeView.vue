@@ -2,11 +2,26 @@
 export default {
   data: () => ({
     items: [
-      {title: 'Главная'},
-      {title: 'О нас'},
-      {title: 'Наши партнеры'},
-      {title: 'Отзывы'},
-      {title: 'Контакты'},
+      {
+        title: 'Главная',
+        path:'#home'
+      },
+      {
+        title: 'О нас',
+        path:'#'
+      },
+      {
+        title: 'Наши партнеры',
+        path:'#partners'
+      },
+      {
+        title: 'Отзывы',
+        path:''
+      },
+      {
+        title: 'Контакты',
+        path:'#contacts'
+      },
     ],
   }),
 }
@@ -16,7 +31,7 @@ export default {
   <div>
     <div class="wrap">
       <div class="logo">
-        <h3>RmPro</h3>
+        <h3 id="home">RmPro</h3>
       </div>
       <div>
         <router-link to="/auth/signin">sign in</router-link>
@@ -37,7 +52,9 @@ export default {
                 v-for="(item, i) in items"
                 :key="i"
             >
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title>
+                <a :href="item.path">{{item.title }}</a>
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -49,21 +66,22 @@ export default {
           <img src="../../public/media/images/welcome.png"/>
         </div>
         <div class="header__title">
-          <img src="../../public/media/images/exmaplescreen.png" /></div>
-          <p class="data_real">Данные в реальном времени</p>
+          <img src="../../public/media/images/exmaplescreen.png" />
+          <p class="data_real">Текущие данные дымавого извещателя вашего бизнеса  </p>
+        </div>
         <div class="header___title">
         </div>
       </div>
     </div>
     <div class="part_wrap">
       <br>
-      <h2>Наши партнеры (например)</h2>
+      <h2 id="partners">Наши партнеры (например)</h2>
       <br>
       <div class="partners">
         <div>
           <img src="../../public/media/images/partners.png"/>
 
-          <p>Продают датчики</p>
+          <p>Продажа датчиков</p>
         </div>
         <div>120 теплиц</div>
         <div>50 Отелей</div>
@@ -71,10 +89,10 @@ export default {
       </div>
     </div>
     <div class="footer">
-      <div class="fcf-body">
+      <div  class="fcf-body">
 
         <div id="fcf-form">
-          <h3 class="fcf-h3">Contact us</h3>
+          <h3 id="contacts" class="fcf-h3">Contact us</h3>
 
           <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
 
@@ -102,11 +120,6 @@ export default {
             <div class="fcf-form-group">
               <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
             </div>
-
-            <div class="fcf-credit" id="fcf-credit">
-              Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
-            </div>
-
           </form>
         </div>
 
@@ -116,6 +129,25 @@ export default {
 </template>
 
 <style>
+*{
+  scroll-behavior: smooth;
+}
+.data_real{
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 25px;
+  position: absolute;
+  background: white;
+  top: 33%;
+  text-align: center;
+  left: 16%;
+  width: 70%;
+  z-index: 10;
+  color: #1a73e8;
+}
+.header__title{
+  position: relative;
+}
 .header-title img{
   border-bottom: 1px solid white;
 }
@@ -307,6 +339,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   color: #1a73e8;
 }
 .partners div{
+
   color: white;
   width: 80px;
   height: 80px;
@@ -358,5 +391,6 @@ nav{
   position: fixed;
   bottom: 50px;
   right: 20px;
+  z-index: 100;
 }
 </style>
