@@ -36,6 +36,8 @@ export default {
       <div>
         <router-link to="/auth/signin">sign in</router-link>
         <router-link to="/auth/signup">sign up</router-link>
+<!--        <router-link to="/dashboard/user/1">sign in</router-link>-->
+<!--        <router-link to="/dashboard/user/1">sign up</router-link>-->
       </div>
     </div>
     <div class="nav-wrap">
@@ -92,33 +94,33 @@ export default {
       <div  class="fcf-body">
 
         <div id="fcf-form">
-          <h3 id="contacts" class="fcf-h3">Contact us</h3>
+          <h3 id="contacts" class="fcf-h3">Наши контакты </h3>
 
           <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
 
             <div class="fcf-form-group">
-              <label for="Name" class="fcf-label">Your name</label>
+              <label for="Name" class="fcf-label">Ваше имя</label>
               <div class="fcf-input-group">
                 <input type="text" id="Name" name="Name" class="fcf-form-control" required>
               </div>
             </div>
 
             <div class="fcf-form-group">
-              <label for="Email" class="fcf-label">Your email address</label>
+              <label for="Email" class="fcf-label">Ваш эл.адрес </label>
               <div class="fcf-input-group">
                 <input type="email" id="Email" name="Email" class="fcf-form-control" required>
               </div>
             </div>
 
             <div class="fcf-form-group">
-              <label for="Message" class="fcf-label">Your message</label>
+              <label for="Message" class="fcf-label">Сообщение</label>
               <div class="fcf-input-group">
                 <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
               </div>
             </div>
 
             <div class="fcf-form-group">
-              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+              <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Отправить сообщение</button>
             </div>
           </form>
         </div>
