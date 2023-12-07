@@ -5,6 +5,8 @@ export default {
       dialog: false,
     }
   },
+  methods:{
+  }
 }
 </script>
 
@@ -41,8 +43,8 @@ export default {
                     </v-btn>
                     <br>
                     <br>
-                    <v-btn variant="outlined" color="green">
-                      Принять меры
+                    <v-btn @click="mery" variant="outlined" color="green">
+                      <a href="tel:112">Позвонить МЧС</a>
                     </v-btn>
                   </div>
                 </div>
@@ -56,8 +58,8 @@ export default {
                     </v-btn>
                     <br>
                     <br>
-                    <v-btn variant="outlined" color="green">
-                      Принять меры
+                    <v-btn @click="mery" variant="outlined" color="green">
+                      <a href="tel:112">Позвонить МЧС</a>
                     </v-btn>
                   </div>
                 </div>
@@ -66,13 +68,13 @@ export default {
                   <p>Дата и время утечки: 08.11.2023</p>
                   <p>Номер датчика: Зал-4, 4</p>
                   <div>
-                    <v-btn variant="outlined" color="error">
+                    <v-btn  variant="outlined" color="error">
                       Игнорировать
                     </v-btn>
                     <br>
                     <br>
-                    <v-btn variant="outlined" color="green">
-                      Принять меры
+                    <v-btn @click="mery" variant="outlined" color="green">
+                      <a href="tel:112">Позвонить МЧС</a>
                     </v-btn>
                   </div>
                 </div>

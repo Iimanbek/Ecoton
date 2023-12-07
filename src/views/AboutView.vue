@@ -79,14 +79,61 @@
     <div>
       <h2>Список датчиков в филиале</h2>
       <ol>
-        <li v-for="i in 10">Датчик номер - {{i}}
+        <li v-for="i in 10">
+          <v-list-item-title class="cardddd-wrap">
+            <div class="cardddd">
+              <h2>Адресс Московская 45А</h2>
+              <p>Статус работы: онлайн</p>
+              <p>Номер датчика: Зал-1, 2</p>
+              <div>
+
+              </div>
+            </div>
+            <div class="cardddd">
+              <h2>Адресс Ломоносова 1А</h2>
+              <p>Статус работы: онлайн</p>
+              <p>Номер датчика: Зал-1, 2</p>
+              <div>
+
+
+              </div>
+            </div>
+            <div class="cardddd">
+              <h2>Адресс Кочкоралиева 5б</h2>
+              <p>Статус работы: онлайн</p>
+              <p>Номер датчика: Зал-4, 4</p>
+              <div>
+              </div>
+            </div>
+          </v-list-item-title>
         </li>
       </ol>
     </div>
   </div>
 </template>
 
-<style>
+
+<script >
+export default {
+  data (){
+    return{
+      dialog: false,
+    }
+  },
+
+}
+</script>
+<style scoped>
+h2{
+  text-align: center ;
+}
+.cardddd{
+  margin: 0 auto auto;
+  box-shadow: 0 0 4px 1px grey;
+  width: 300px;
+  background: white;
+
+}
 .navv{
   display: flex;
   justify-content: space-between;
@@ -109,12 +156,3 @@
   margin-left: 10px ;
 }
 </style>
-<script >
-export default {
-  data (){
-    return{
-      dialog: false,
-    }
-  },
-}
-</script>
