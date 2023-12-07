@@ -111,7 +111,7 @@ export default {
         <h2>Список филиалов</h2>
         <div class="filial-list-inner">
           <div class="filial" v-for="i in 5">
-            <router-link to="/dashboards/user/1/filial/2">{{i}} - точка</router-link>
+            <router-link to="/dashboard/user/:id/filial/2">{{i}} - точка</router-link>
           </div>
         </div>
       </div>
