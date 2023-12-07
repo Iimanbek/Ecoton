@@ -51,6 +51,7 @@
           </v-card-text>
         </v-card>
 <!--        @click="authIn"-->
+        <router-link to="/dashboard/user/1">
         <v-btn
             block
             class="mb-8"
@@ -58,8 +59,9 @@
             size="large"
             variant="tonal"
         >
-          <router-link to="/dashboard/user/1">Log In</router-link>
+         Log In
         </v-btn>
+        </router-link>
 
         <v-card-text class="text-center">
           <router-link    class="text-blue text-decoration-none" to="/auth/signup">Sign up now <v-icon icon="mdi-chevron-right"></v-icon> </router-link>

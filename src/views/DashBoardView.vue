@@ -43,9 +43,11 @@ export default {
                     </v-btn>
                     <br>
                     <br>
+                    <a href="tel:112">
                     <v-btn @click="mery" variant="outlined" color="green">
-                      <a href="tel:112">Позвонить МЧС</a>
+                      Позвонить МЧС
                     </v-btn>
+                    </a>
                   </div>
                 </div>
                 <div class="cardddd">
@@ -58,9 +60,11 @@ export default {
                     </v-btn>
                     <br>
                     <br>
-                    <v-btn @click="mery" variant="outlined" color="green">
-                      <a href="tel:112">Позвонить МЧС</a>
-                    </v-btn>
+                    <a href="tel:112">
+                      <v-btn @click="mery" variant="outlined" color="green">
+                        Позвонить МЧС
+                      </v-btn>
+                    </a>
                   </div>
                 </div>
                 <div class="cardddd">
@@ -73,9 +77,11 @@ export default {
                     </v-btn>
                     <br>
                     <br>
-                    <v-btn @click="mery" variant="outlined" color="green">
-                      <a href="tel:112">Позвонить МЧС</a>
-                    </v-btn>
+                    <a href="tel:112">
+                      <v-btn @click="mery" variant="outlined" color="green">
+                        Позвонить МЧС
+                      </v-btn>
+                    </a>
                   </div>
                 </div>
               </v-list-item-title>
