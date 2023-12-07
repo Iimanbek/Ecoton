@@ -90,11 +90,14 @@ export default {
         <div class="vip">Здесь можете быть вы</div>
       </div>
     </div>
+    <hr>
+    <a class="call" href="tel:+996500062672">Cвязаться с нами</a>
     <div class="footer">
       <div  class="fcf-body">
 
         <div id="fcf-form">
           <h3 id="contacts" class="fcf-h3">Наши контакты </h3>
+
 
           <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
 
@@ -131,6 +134,21 @@ export default {
 </template>
 
 <style>
+
+hr{
+  margin-top: 40px;
+  background: grey  ;
+}
+.call{
+  text-align: center ;
+  display: inline-block;
+  //width: 100px;
+  background: #1a73e8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px ;
+  margin: 50px 0 0 110px  ;
+}
 *{
   scroll-behavior: smooth;
 }
@@ -325,7 +343,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   width: 100%;
 }
 .footer{
-  margin-top: 100px;
+  margin-top: 50px;
   height: 20vh;
   background: #1a73e8;
 }
